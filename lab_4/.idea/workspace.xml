@@ -5,34 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c31abd08-99f1-4546-9ce2-67c75b3a82ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/palantir-java-format.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LogisticsSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/CargoInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/TransportInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/product/Cargo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/product/CargoBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/Transport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/TransportCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/creator/AirTransportCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/creator/LandTransportCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/creator/WaterTransportCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/type/AirTransport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/type/LandTransport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transport/type/WaterTransport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Operator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/CalculatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/OperatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/ReaderImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab1/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab1/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab1/.idea/jarRepositories.xml" beforeDir="false" />
@@ -42,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab1/lab1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oop_rep/oop-bsuir" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
