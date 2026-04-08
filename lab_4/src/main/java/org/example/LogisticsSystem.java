@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.dto.CargoInfo;
+import org.example.dto.Result;
 import org.example.dto.TransportInfo;
 import org.example.product.Cargo;
 import org.example.transport.Transport;
@@ -46,7 +47,7 @@ public class LogisticsSystem {
         List<Transport> transports = operator.requestTransport(existTransport);
         double distance = operator.requestDistance();
 
-        var map = calculator.calculate(transports, cargos, distance);
+        Map<String, Result> map = calculator.calculate(transports, cargos, distance);
         while (true) {
             String fileNameToSave = operator.requestToSave();
 
@@ -71,7 +72,7 @@ public class LogisticsSystem {
         return consumptionFilter.filterOut(existTransport);
     }
 
-    private boolean saveResult(String fileNameToSave, Map<String, Double> result) throws IOException {
+    private boolean saveResult(String fileNameToSave, Map<String, Result> result) throws IOException {
         Saver saver;
         if (fileNameToSave.endsWith("json")) {
             saver = new JsonSaver();

@@ -1,5 +1,6 @@
 package org.example.utils.implementation.saver;
 
+import org.example.dto.Result;
 import org.example.utils.Saver;
 
 import java.io.OutputStream;
@@ -15,7 +16,7 @@ public abstract class DecoratorSaver implements Saver {
     }
 
     @Override
-    public void save(Map<String, Double> result, OutputStream os) {
+    public void save(Map<String, Result> result, OutputStream os) {
         saver.save(result, os);
     }
 }

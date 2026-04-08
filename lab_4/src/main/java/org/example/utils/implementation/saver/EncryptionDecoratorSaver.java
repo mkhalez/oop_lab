@@ -1,5 +1,6 @@
 package org.example.utils.implementation.saver;
 
+import org.example.dto.Result;
 import org.example.utils.Saver;
 
 import java.io.OutputStream;
@@ -13,12 +14,12 @@ public class EncryptionDecoratorSaver extends DecoratorSaver{
     }
 
     @Override
-    public void save(Map<String, Double> result, OutputStream os) {
+    public void save(Map<String, Result> result, OutputStream os) {
         var newResult = result.entrySet()
                 .stream()
                 .collect(Collectors.toMap(
                         entry -> shifting(entry.getKey()),
-                        entry -> entry.getValue() + CHANGE_NUMBER
+                        entry -> new Result(entry.getValue().price() + CHANGE_NUMBER, entry.getValue().speed() + CHANGE_NUMBER)
                 ));
         super.save(newResult, os);
     }

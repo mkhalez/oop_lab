@@ -5,35 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c31abd08-99f1-4546-9ce2-67c75b3a82ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/LogisticsWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Saver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/CargoFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/TransportFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/cargo/CargoBaseFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/cargo/FilterByCostOfTransportationPerKg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/cargo/FilterWeightUnitsKg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/transport/FilterConsumption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/transport/FilterSpeed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/transport/TransportBaseFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/reader/JsonReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/reader/XmlReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/CsvSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/DecoratorSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/EncryptionDecoratorSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/JsonSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/ZipDecoratorSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LogisticsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LogisticsSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/TransportInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/TransportInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Saver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/CalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/CalculatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/OperatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/OperatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/ReaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/reader/CsvReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/CsvSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/CsvSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/DecoratorSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/DecoratorSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/EncryptionDecoratorSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/EncryptionDecoratorSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/JsonSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/JsonSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/ZipDecoratorSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/ZipDecoratorSaver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,13 +108,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/ZipDecoratorSaver.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/JsonSaver.java</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>

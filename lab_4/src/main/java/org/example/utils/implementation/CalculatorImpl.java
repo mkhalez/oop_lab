@@ -1,5 +1,6 @@
 package org.example.utils.implementation;
 
+import org.example.dto.Result;
 import org.example.product.Cargo;
 import org.example.transport.Transport;
 import org.example.utils.Calculator;
@@ -10,8 +11,8 @@ import java.util.Map;
 
 public class CalculatorImpl implements Calculator {
     @Override
-    public Map<String, Double> calculate(List<Transport> transports, Map<Cargo, Integer> cargos, double distance) {
-        Map<String, Double> map = new HashMap<>();
+    public Map<String, Result> calculate(List<Transport> transports, Map<Cargo, Integer> cargos, double distance) {
+        Map<String, Result> map = new HashMap<>();
 
         for(var transport : transports) {
             double result = 0.0;
@@ -22,9 +23,9 @@ public class CalculatorImpl implements Calculator {
 
             result += transport.getConsumptionPerKm() * distance;
 
-            System.out.println(transport.getName() + " result: " + result);
+            System.out.println(transport.getName() + " result: " + "price: " + result + ", speed: " + transport.getSpeedKilometersPerHour());
 
-            map.put(transport.getName(), result);
+            map.put(transport.getName(), new Result(result, transport.getSpeedKilometersPerHour()));
         }
 
         return map;
