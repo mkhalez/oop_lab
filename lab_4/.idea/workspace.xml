@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c31abd08-99f1-4546-9ce2-67c75b3a82ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/sorting/SortStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/sorting/implementation/SortByPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/filter/sorting/implementation/SortBySpeed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LogisticsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LogisticsSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Saver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/CalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/CalculatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/OperatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/OperatorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/CsvSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/CsvSaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/DecoratorSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/DecoratorSaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/EncryptionDecoratorSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/EncryptionDecoratorSaver.java" afterDir="false" />
@@ -53,11 +56,11 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/mkh-alez/bsuir/oop/lab_4/src/main/java/org/example/utils",
+    "last_opened_file_path": "/home/mkh-alez/Downloads/plugin/plantq.zip",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -103,17 +106,6 @@
       <updated>1775458564160</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/utils/implementation/saver/JsonSaver.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

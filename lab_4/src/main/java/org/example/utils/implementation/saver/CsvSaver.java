@@ -4,16 +4,17 @@ import org.example.dto.Result;
 import org.example.utils.Saver;
 
 import java.io.*;
+import java.util.List;
 import java.util.Map;
 
 public class CsvSaver implements Saver {
     @Override
-    public void save(Map<String, Result> result, OutputStream os) {
+    public void save(List<Map.Entry<String, Result>> result, OutputStream os) {
         try(BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os))) {
             writer.write("transport;price;speed");
             writer.newLine();
 
-            for(var entry : result.entrySet()) {
+            for(var entry : result) {
                 writer.write(entry.getKey() + ";" + entry.getValue().price() + ";" + entry.getValue().speed());
                 writer.newLine();
             }

@@ -33,6 +33,8 @@ public interface Operator {
     int requestMinSpeed();
     int requestMaxSpeed();
 
-
+    boolean enableSort();
+    boolean enableSortByPrice();
+    boolean enableSortBySpeed();
 
 }

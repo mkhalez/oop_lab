@@ -26,6 +26,39 @@ public class OperatorImpl implements Operator {
     }
 
     @Override
+    public boolean enableSort() {
+        System.out.print("to sort result - 1 or 0 to skip: ");
+        while (true) {
+            int x = askNumber();
+            if(x == 1) return true;
+            if(x == 0) return false;
+            System.out.print("incorrect value, try again: ");
+        }
+    }
+
+    @Override
+    public boolean enableSortByPrice() {
+        System.out.print("to sort by price result - 1 or 0 to skip: ");
+        while (true) {
+            int x = askNumber();
+            if(x == 1) return true;
+            if(x == 0) return false;
+            System.out.print("incorrect value, try again: ");
+        }
+    }
+
+    @Override
+    public boolean enableSortBySpeed() {
+        System.out.print("to sort by speed result - 1 or 0 to skip: ");
+        while (true) {
+            int x = askNumber();
+            if(x == 1) return true;
+            if(x == 0) return false;
+            System.out.print("incorrect value, try again: ");
+        }
+    }
+
+    @Override
     public boolean enableFilter() {
         System.out.print("enter 1 to filter transport or 0 to skip: ");
         while (true) {

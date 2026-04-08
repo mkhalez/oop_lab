@@ -10,6 +10,9 @@ import org.example.utils.Operator;
 import org.example.utils.Reader;
 import org.example.utils.Saver;
 import org.example.utils.implementation.filter.TransportFilter;
+import org.example.utils.implementation.filter.sorting.SortStrategy;
+import org.example.utils.implementation.filter.sorting.implementation.SortByPrice;
+import org.example.utils.implementation.filter.sorting.implementation.SortBySpeed;
 import org.example.utils.implementation.filter.transport.FilterConsumption;
 import org.example.utils.implementation.filter.transport.FilterSpeed;
 import org.example.utils.implementation.saver.CsvSaver;
@@ -19,6 +22,8 @@ import org.example.utils.implementation.saver.ZipDecoratorSaver;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -47,11 +52,12 @@ public class LogisticsSystem {
         List<Transport> transports = operator.requestTransport(existTransport);
         double distance = operator.requestDistance();
 
-        Map<String, Result> map = calculator.calculate(transports, cargos, distance);
+        List<Map.Entry<String, Result>> result = calculator.calculate(transports, cargos, distance).entrySet().stream().toList();
+        result = new ArrayList<>(result);
         while (true) {
             String fileNameToSave = operator.requestToSave();
 
-            if(!fileNameToSave.isEmpty() && !saveResult(fileNameToSave, map)) {
+            if(!fileNameToSave.isEmpty() && !saveResult(fileNameToSave, result)) {
                 System.out.print("error with filename, try again: ");
                 continue;
             }
@@ -72,7 +78,24 @@ public class LogisticsSystem {
         return consumptionFilter.filterOut(existTransport);
     }
 
-    private boolean saveResult(String fileNameToSave, Map<String, Result> result) throws IOException {
+    private List<Map.Entry<String, Result>> getSortedResult( List<Map.Entry<String, Result>> entries) {
+        List<SortStrategy> strategies = new ArrayList<>();
+
+        if(operator.enableSortByPrice()) strategies.add(new SortByPrice());
+        if(operator.enableSortBySpeed()) strategies.add(new SortBySpeed());
+
+        Comparator<Map.Entry<String, Result>> combined = strategies.stream()
+                .map(SortStrategy::getComparator)
+                .reduce(Comparator::thenComparing)
+                .orElse((a,b) -> 0);
+
+        entries.sort(combined);
+
+        return entries;
+    }
+
+
+    private boolean saveResult(String fileNameToSave, List<Map.Entry<String, Result>> result) throws IOException {
         Saver saver;
         if (fileNameToSave.endsWith("json")) {
             saver = new JsonSaver();
@@ -92,6 +115,9 @@ public class LogisticsSystem {
             fileNameToSave = fileNameToSave.replace("csv", "zip");
         }
 
+        if(operator.enableSort()) {
+            getSortedResult(result);
+        }
         try(FileOutputStream fos = new FileOutputStream(fileNameToSave)) {
             saver.save(result, fos);
         }

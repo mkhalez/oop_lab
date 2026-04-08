@@ -4,6 +4,7 @@ import org.example.dto.Result;
 import org.example.utils.Saver;
 
 import java.io.OutputStream;
+import java.util.List;
 import java.util.Map;
 
 public abstract class DecoratorSaver implements Saver {
@@ -16,7 +17,7 @@ public abstract class DecoratorSaver implements Saver {
     }
 
     @Override
-    public void save(Map<String, Result> result, OutputStream os) {
+    public void save(List<Map.Entry<String, Result>> result, OutputStream os) {
         saver.save(result, os);
     }
 }

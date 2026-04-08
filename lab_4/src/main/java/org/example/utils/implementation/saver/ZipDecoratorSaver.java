@@ -5,6 +5,7 @@ import org.example.utils.Saver;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -15,7 +16,7 @@ public class ZipDecoratorSaver extends DecoratorSaver{
     }
 
     @Override
-    public void save(Map<String, Result> result, OutputStream os) {
+    public void save(List<Map.Entry<String, Result>> result, OutputStream os) {
         ZipOutputStream zipOut = new ZipOutputStream(os);
 
         String jsonName = fileName.replace(".zip", ".json");

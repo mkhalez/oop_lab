@@ -10,12 +10,13 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
+import java.util.List;
 import java.util.Map;
 
 public class JsonSaver implements Saver {
     private ObjectMapper mapper = new ObjectMapper();
     @Override
-    public void save(Map<String, Result> result, OutputStream os) {
+    public void save(List<Map.Entry<String, Result>> result, OutputStream os) {
         try {
             mapper.writeValue(os, result);
         } catch (IOException e) {
