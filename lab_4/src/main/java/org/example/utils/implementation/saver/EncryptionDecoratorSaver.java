@@ -1,0 +1,33 @@
+package org.example.utils.implementation.saver;
+
+import org.example.utils.Saver;
+
+import java.io.OutputStream;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class EncryptionDecoratorSaver extends DecoratorSaver{
+    private static final int CHANGE_NUMBER = 5;
+    public EncryptionDecoratorSaver(Saver saver, String fileName) {
+        super(saver, fileName);
+    }
+
+    @Override
+    public void save(Map<String, Double> result, OutputStream os) {
+        var newResult = result.entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        entry -> shifting(entry.getKey()),
+                        entry -> entry.getValue() + CHANGE_NUMBER
+                ));
+        super.save(newResult, os);
+    }
+
+    private String shifting(String value) {
+        StringBuilder builder = new StringBuilder();
+        for(var c : value.toCharArray()) {
+            builder.append((char)(c + CHANGE_NUMBER));
+        }
+        return builder.toString();
+    }
+}

@@ -6,5 +6,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface Calculator {
-    double calculate(Transport transport, Map<Cargo, Integer> cargos, double distance);
+    Map<String, Double> calculate(List<Transport> transports, Map<Cargo, Integer> cargos, double distance);
 }

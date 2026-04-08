@@ -2,22 +2,20 @@ package org.example;
 
 import org.example.utils.Calculator;
 import org.example.utils.Operator;
-import org.example.utils.Reader;
+import org.example.utils.Saver;
 import org.example.utils.implementation.CalculatorImpl;
 import org.example.utils.implementation.OperatorImpl;
-import org.example.utils.implementation.ReaderImpl;
+import org.example.utils.implementation.saver.JsonSaver;
 
-import java.sql.Connection;
+import java.io.IOException;
 
 public class App
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws IOException {
         Calculator calculator = new CalculatorImpl();
         Operator operator = new OperatorImpl();
-        Reader reader = new ReaderImpl();
 
-        LogisticsSystem logisticsSystem = new LogisticsSystem(reader, operator, calculator);
+        LogisticsSystem logisticsSystem = new LogisticsSystem(operator, calculator);
         logisticsSystem.run();
     }
 }

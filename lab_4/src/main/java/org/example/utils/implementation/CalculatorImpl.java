@@ -4,20 +4,30 @@ import org.example.product.Cargo;
 import org.example.transport.Transport;
 import org.example.utils.Calculator;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CalculatorImpl implements Calculator {
     @Override
-    public double calculate(Transport transport, Map<Cargo, Integer> cargos, double distance) {
-        double result = 0.0;
+    public Map<String, Double> calculate(List<Transport> transports, Map<Cargo, Integer> cargos, double distance) {
+        Map<String, Double> map = new HashMap<>();
 
-        result = cargos.entrySet().stream()
-                .mapToDouble(entry -> entry.getKey().getCostOfTransportationPerKg() * entry.getKey().getWeightUnitsKg() * entry.getValue())
-                .sum();
+        for(var transport : transports) {
+            double result = 0.0;
 
-        result += transport.getConsumptionPerKm() * distance;
+            result = cargos.entrySet().stream()
+                    .mapToDouble(entry -> entry.getKey().getCostOfTransportationPerKg() * entry.getKey().getWeightUnitsKg() * entry.getValue())
+                    .sum();
 
-        return result;
+            result += transport.getConsumptionPerKm() * distance;
+
+            System.out.println(transport.getName() + " result: " + result);
+
+            map.put(transport.getName(), result);
+        }
+
+        return map;
     }
 
 }

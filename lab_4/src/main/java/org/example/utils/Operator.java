@@ -13,7 +13,26 @@ public interface Operator {
 
     Map<Cargo, Integer> requestCargo(List<CargoInfo> cargoInfos);
 
-    Transport requestTransport(List<TransportInfo> transportInfos);
+    List<Transport> requestTransport(List<TransportInfo> transportInfos);
 
     double requestDistance();
+
+    Reader getReader(String fileName);
+
+    String requestToSave();
+
+    boolean enableEncryption();
+
+    boolean enableZip();
+
+    boolean enableFilter();
+
+    int requestMaxConsumption();
+    int requestMinConsumption();
+
+    int requestMinSpeed();
+    int requestMaxSpeed();
+
+
+
 }

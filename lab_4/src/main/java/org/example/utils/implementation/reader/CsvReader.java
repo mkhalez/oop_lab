@@ -1,4 +1,4 @@
-package org.example.utils.implementation;
+package org.example.utils.implementation.reader;
 
 import org.example.dto.CargoInfo;
 import org.example.dto.TransportInfo;
@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReaderImpl implements Reader {
+public class CsvReader implements Reader {
     @Override
     public List<CargoInfo> getCargoesInfo(String fileName) {
         List<CargoInfo> result = new ArrayList<>();
